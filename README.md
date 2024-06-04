@@ -1,6 +1,6 @@
 # example-tilt-cdk8
 
-This GitHub repository demonstrates how to use CDK8s (Cloud Development Kit for Kubernetes) with Tilt to provision and manage a MongoDB database and a NATS server. It also includes NACK controller to provision & manage a stream. The repository is structured to facilitate easy setup and deployment using CDK8s for Kubernetes resource definitions.
+This GitHub repository demonstrates how to use CDK8s (Cloud Development Kit for Kubernetes) with Tilt to provision and manage a MongoDB database and a NATS server. It also includes NACK controller to provision & manage NATS configuration (e.g. streams). The repository is structured to facilitate easy setup and deployment using CDK8s for Kubernetes resource definitions.
 
 ## Development setup
 
