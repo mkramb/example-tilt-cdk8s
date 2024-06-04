@@ -1,0 +1,16 @@
+version: "3"
+
+tasks:
+  setup-pnpm:
+    desc: Will clean all node_modules and configure pnpm using corepack
+    cmds:
+      - find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+      - COREPACK_ENABLE_STRICT=0 && corepack enable && corepack prepare pnpm@9.1.4 --activate
+      - pnpm i
+
+  setup-kind:
+    desc: Sets up kinds cluster
+    cmds:
+      - ./tools/delete-kind-cluster.sh
+      - docker system prune -f -a --volumes
+      - ./tools/create-kind-cluster.sh

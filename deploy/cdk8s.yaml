@@ -1,0 +1,7 @@
+language: typescript
+app: ts-node src/main.ts
+imports:
+  - k8s
+  - helm:https://nats-io.github.io/k8s/helm/charts/nack@0.14.0
+  - helm:https://nats-io.github.io/k8s/helm/charts/nats@1.1.12
+  - https://github.com/nats-io/nack/releases/latest/download/crds.yml
